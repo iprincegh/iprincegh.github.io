@@ -498,9 +498,7 @@
 			preloadEl.style.display = 'none';
 			var preloadVid = preloadEl.querySelector('video');
 			if (preloadVid) { preloadVid.pause(); preloadVid.removeAttribute('src'); preloadVid.load(); }
-			// Start the persistent globe instead
-			var globeVid = document.querySelector('.spinning-globe video');
-			if (globeVid) globeVid.play();
+			// Persistent globe is started by spa-router.js (globe continuity script)
 			var orig = document.querySelector('#preload-text-original');
 			if (orig) orig.style.display = 'none';
 			var holder = document.querySelector('#preload-text-position-holder');
@@ -521,8 +519,7 @@
 					// Stop preload video, start persistent globe
 					var pv = preloadBg.querySelector('video');
 					if (pv) { pv.pause(); pv.removeAttribute('src'); pv.load(); }
-					var gv = document.querySelector('.spinning-globe video');
-					if (gv) gv.play();
+					// Persistent globe is started by spa-router.js (globe continuity script)
 				}, 800);
 			}, 4000);
 		}
