@@ -2,29 +2,35 @@
 <html lang="en">
 
 <head>
-	<title>#TECHstories</title>
+	<title>#Research | Prince Oppong Boakye</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230327195509" />
 	<link rel="stylesheet" href="css/style.min.css?_v=20230327195509">
+	<link rel="stylesheet" href="css/portfolio.css">
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<div class="spinning-globe">
+		<video src="img/globe.mp4" autoplay muted loop playsinline></video>
+	</div>
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
 				<div class="header__wrapper">
-					<a class="header__logo" href="index.html"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="kron logo"></picture></a>
+					<a class="header__logo" href="index.html">
+						<picture>
+							<source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Prince OB logo">
+						</picture>
+					</a>
 					<nav class="header__menu menu">
 						<ul class="menu__items">
-							<li class="menu__item"><a href="index.html">about us.</a></li>
+							<li class="menu__item"><a href="index.html">about.</a></li>
 							<li class="menu__item"><a href="projects.html">projects.</a></li>
-							<li class="menu__item"><a href="contacts.html">contacts.</a></li>
-							<li class="menu__item menu__item_gradient"><a href="iprincestories.html">#TECHstories</a></li>
+							<li class="menu__item"><a href="contacts.html">contact.</a></li>
+							<li class="menu__item menu__item_gradient"><a href="iprincestories.html">#research</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -36,72 +42,195 @@
 					<section class="stories">
 
 						<div class="stories__title title title_big">
-							<div class="stories__title_first-part">TECH</div>
-							<div class="stories__title_second-part"><span class="text_grey">Stories</span><span class="text-accent_orange">/</span></div>
+							<div class="stories__title_first-part">Research</div>
+							<div class="stories__title_second-part"><span class="text_grey">& Open Science</span><span class="text-accent_orange">/</span></div>
+						</div>
+
+						<div class="research-intro" style="max-width: 900px; margin: 2rem 0 3rem; line-height: 1.7;">
+							<p>My research sits at the intersection of <strong>geoinformatics</strong>, <strong>machine learning</strong>, and <strong>open science</strong>. I'm passionate about making research transparent, reproducible, and accessible. As a CODECHECKER at the University of Münster, I verify the computational reproducibility of scientific papers. Below are highlights from my research journey.</p>
+						</div>
+
+					</section>
+				</div>
+			</div>
+
+			<div class="kronstories__container">
+				<div class="kronstories__wrapper">
+
+					<!-- Research Areas -->
+					<section class="research-section" style="margin-bottom: 4rem;">
+						<div class="title title_small" style="margin-bottom: 2rem;">
+							research areas<span class="text-accent_orange">/</span>
+						</div>
+
+						<div class="choose__cards" style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+							<div class="choose-card" style="flex: 1; min-width: 250px;">
+								<div class="choose-card__title">Geospatial Analysis</div>
+								<div class="choose-card__text">Geostatistics, spatial data analysis, raster/vector processing, remote sensing, and GIS applications for health and environmental research.</div>
+							</div>
+							<div class="choose-card" style="flex: 1; min-width: 250px;">
+								<div class="choose-card__title">Machine Learning &amp; AI</div>
+								<div class="choose-card__text">NLP, sentiment analysis, LLM-based chatbots, predictive modeling for public health, and AI applications in geosciences.</div>
+							</div>
+							<div class="choose-card" style="flex: 1; min-width: 250px;">
+								<div class="choose-card__title">Open Science</div>
+								<div class="choose-card__text">Computational reproducibility checking, FAIR data principles, open-source research tools, and transparent scientific workflows.</div>
+							</div>
+							<div class="choose-card" style="flex: 1; min-width: 250px;">
+								<div class="choose-card__title">Health Informatics</div>
+								<div class="choose-card__text">Geospatial analysis of disease patterns, malaria prevalence modeling, and haptic/assistive technologies for visually impaired navigation.</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- Key Publications -->
+					<section class="research-section" style="margin-bottom: 4rem;">
+						<div class="title title_small" style="margin-bottom: 2rem;">
+							publications<span class="text-accent_orange">/</span>
+						</div>
+
+						<div class="publications-list">
+							<!-- ResearchGate publications -->
+							<div class="publication-item">
+								<div class="publication-item__title">Wearable Haptic Wayfinding Systems for the Visually Impaired: A Critical Review of Sensor Technologies, Interface Design, and Usability Challenges</div>
+								<div class="publication-item__meta">Prince Oppong Boakye (2025) &bull; Preprint</div>
+								<div class="publication-item__desc">A critical synthesis of 31 academic studies on wearable haptic navigation systems designed for visually impaired pedestrians, analyzing unresolved trade-offs between sensor modalities and haptic encoding strategies.</div>
+								<a class="publication-item__link" href="https://www.researchgate.net/publication/398422684" target="_blank">View on ResearchGate &rarr;</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">A Community Model for Rigorous and Inclusive Scholarship: Inaugural Editorial of Replication Research (R2)</div>
+								<div class="publication-item__meta">Lukas R&ouml;seler, Lukas Wallrich, ... Prince Oppong Boakye et al. (2025) &bull; Article, Replication Research</div>
+								<div class="publication-item__desc">Replication Research (R2) is a Diamond Open Access journal publishing high-quality reproductions, replications, and related methodological work across disciplines with robust standards for transparency.</div>
+								<a class="publication-item__link" href="https://www.researchgate.net/publication/397331903" target="_blank">View on ResearchGate &rarr;</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">Replication Research Constitution</div>
+								<div class="publication-item__meta">Lukas R&ouml;seler, Lukas Wallrich, ... Prince Oppong Boakye et al. (2025) &bull; Preprint</div>
+								<div class="publication-item__desc">Constitution for the newly established diamond open-access journal Replication Research, developed in collaboration with FORRT and a large community of researchers.</div>
+								<a class="publication-item__link" href="https://www.researchgate.net/publication/396447360" target="_blank">View on ResearchGate &rarr;</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">Replication Research: Journal Description</div>
+								<div class="publication-item__meta">Lukas R&ouml;seler, Lukas Wallrich, ... Prince Oppong Boakye et al. (2025) &bull; Preprint</div>
+								<div class="publication-item__desc">Materials for the diamond open-access journal Replication Research (replicationresearch.org), created to enable researchers and journals to cite, view, and reuse its contents.</div>
+								<a class="publication-item__link" href="https://www.researchgate.net/publication/396447199" target="_blank">View on ResearchGate &rarr;</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">Spatio-Temporal Analysis of Ghana Malaria Cases: Development of an Interactive Dashboard for Public Health Decision-Making</div>
+								<div class="publication-item__meta">Prince Oppong Boakye (2024) &bull; Research, University of M&uuml;nster</div>
+								<div class="publication-item__desc">A method for malaria surveillance in Ghana relying on 10 years of data (2010&ndash;2020), featuring an interactive geospatial dashboard combining malaria incidence rates by region.</div>
+								<a class="publication-item__link" href="https://www.researchgate.net/publication/398711570" target="_blank">View on ResearchGate &rarr;</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">Sentiment Analysis in Python Using Machine Learning</div>
+								<div class="publication-item__meta">Prince Oppong Boakye (2023) &bull; BSc Thesis, Bharathiar University</div>
+								<div class="publication-item__desc">Comprehensive sentiment analysis of customer reviews using machine learning models including VADER, TextBlob, and transformer architectures for large-scale e-commerce text data.</div>
+								<a class="publication-item__link" href="https://www.researchgate.net/publication/398701615" target="_blank">View on ResearchGate &rarr;</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">Replication of Geers and Lassiter (2003, Study 1): Affective Expectations and Need for Cognition</div>
+								<div class="publication-item__meta">Lukas R&ouml;seler, Doetsch, C. A., F&ouml;rster, N., ... Prince Oppong Boakye (2025) &bull; Preprint</div>
+								<div class="publication-item__desc">Replication study examining the relationship between affective expectations and need for cognition, based on the original Geers and Lassiter (2003) findings.</div>
+								<a class="publication-item__link" href="https://doi.org/10.17605/OSF.IO/RGE23" target="_blank">DOI: 10.17605/OSF.IO/RGE23</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">StaRT Reports</div>
+								<div class="publication-item__meta">Lukas R&ouml;seler, Hein, M., &amp; Prince Oppong Boakye (2025) &bull; Preprint</div>
+								<div class="publication-item__desc">Standardized Replication and Testing (StaRT) reports framework for transparent and structured documentation of replication studies.</div>
+								<a class="publication-item__link" href="https://doi.org/10.17605/OSF.IO/BRXTD" target="_blank">DOI: 10.17605/OSF.IO/BRXTD</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">CODECHECK Certificate 2025-020</div>
+								<div class="publication-item__meta">Prince Oppong Boakye (2025) &bull; Zenodo</div>
+								<div class="publication-item__desc">Certificate documenting the computational reproducibility verification of a scientific paper as part of the CODECHECK initiative.</div>
+								<a class="publication-item__link" href="https://doi.org/10.5281/zenodo.15762107" target="_blank">DOI: 10.5281/zenodo.15762107</a>
+							</div>
+						</div>
+					</section>
+
+					<!-- Research Profiles -->
+					<section class="research-section" style="margin-bottom: 4rem;">
+						<div class="title title_small" style="margin-bottom: 2rem;">
+							research profiles<span class="text-accent_orange">/</span>
+						</div>
+
+						<div class="portfolio-socials__links" style="margin-top: 1rem;">
+							<a href="https://www.researchgate.net/profile/Prince-Oppong-Boakye" target="_blank" class="portfolio-socials__link">
+								<span class="portfolio-socials__icon">RG</span>
+								<span>ResearchGate</span>
+							</a>
+							<a href="https://orcid.org/0009-0003-5447-8034" target="_blank" class="portfolio-socials__link">
+								<span class="portfolio-socials__icon">iD</span>
+								<span>ORCiD</span>
+							</a>
+							<a href="https://github.com/iprincegh" target="_blank" class="portfolio-socials__link">
+								<span class="portfolio-socials__icon">&lt;/&gt;</span>
+								<span>GitHub</span>
+							</a>
 						</div>
 					</section>
 
 				</div>
 			</div>
 
-			<!-- Slider main container -->
+			<!-- Photo Slider -->
 			<div class="swiper stories-slider">
-				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
-					<!-- Slides -->
 					<div class="swiper-slide stories-slide">
 						<div class="stories-slide__img">
-							<picture><source srcset="img/stories/photo-1.webp" type="image/webp"><img src="img/stories/photo-1.jpg" alt="Ships of the desert"></picture>
+							<picture><source srcset="img/stories/photo-1.webp" type="image/webp"><img src="img/stories/photo-1.jpg" alt="Research journey"></picture>
 						</div>
-						<div class="stories-slide__text">Ships of the desert</div>
+						<div class="stories-slide__text">Research journey</div>
 					</div>
-
 					<div class="swiper-slide stories-slide">
 						<div class="stories-slide__img">
-							<picture><source srcset="img/stories/photo-2.webp" type="image/webp"><img src="img/stories/photo-2.jpg" alt="Admire the spire"></picture>
+							<picture><source srcset="img/stories/photo-2.webp" type="image/webp"><img src="img/stories/photo-2.jpg" alt="Geoinformatics at ifgi"></picture>
 						</div>
-						<div class="stories-slide__text">Admire the spire</div>
+						<div class="stories-slide__text">Geoinformatics at ifgi</div>
 					</div>
-
 					<div class="swiper-slide stories-slide">
 						<div class="stories-slide__img">
-							<picture><source srcset="img/stories/photo-3.webp" type="image/webp"><img src="img/stories/photo-3.jpg" alt="The East is a delicate matter"></picture>
+							<picture><source srcset="img/stories/photo-3.webp" type="image/webp"><img src="img/stories/photo-3.jpg" alt="Open Science"></picture>
 						</div>
-						<div class="stories-slide__text">The East is a delicate matter</div>
+						<div class="stories-slide__text">Open Science</div>
 					</div>
-
 					<div class="swiper-slide stories-slide">
 						<div class="stories-slide__img">
-							<picture><source srcset="img/stories/photo-4.webp" type="image/webp"><img src="img/stories/photo-4.jpg" alt="Night City Lights"></picture>
+							<picture><source srcset="img/stories/photo-4.webp" type="image/webp"><img src="img/stories/photo-4.jpg" alt="From Ghana to Germany"></picture>
 						</div>
-						<div class="stories-slide__text">Night City Lights</div>
+						<div class="stories-slide__text">From Ghana to Germany</div>
 					</div>
-
 					<div class="swiper-slide stories-slide">
 						<div class="stories-slide__img">
-							<picture><source srcset="img/stories/photo-5.webp" type="image/webp"><img src="img/stories/photo-5.jpg" alt="Sunset"></picture>
+							<picture><source srcset="img/stories/photo-5.webp" type="image/webp"><img src="img/stories/photo-5.jpg" alt="Exploring the world"></picture>
 						</div>
+						<div class="stories-slide__text">Exploring the world</div>
 					</div>
-
 					<div class="swiper-slide stories-slide">
 						<div class="stories-slide__img">
-							<picture><source srcset="img/stories/photo-6.webp" type="image/webp"><img src="img/stories/photo-6.jpg" alt="It is the tallest one!"></picture>
+							<picture><source srcset="img/stories/photo-6.webp" type="image/webp"><img src="img/stories/photo-6.jpg" alt="Collaboration"></picture>
 						</div>
-						<div class="stories-slide__text">It is the tallest one!</div>
+						<div class="stories-slide__text">Collaboration</div>
 					</div>
-
 					<div class="swiper-slide stories-slide">
 						<div class="stories-slide__img">
-							<picture><source srcset="img/stories/photo-7.webp" type="image/webp"><img src="img/stories/photo-7.jpg" alt="An old little village"></picture>
+							<picture><source srcset="img/stories/photo-7.webp" type="image/webp"><img src="img/stories/photo-7.jpg" alt="Building solutions"></picture>
 						</div>
-						<div class="stories-slide__text">An old little village</div>
+						<div class="stories-slide__text">Building solutions</div>
 					</div>
-
 					<div class="swiper-slide stories-slide">
 						<div class="stories-slide__img">
-							<picture><source srcset="img/stories/photo-8.webp" type="image/webp"><img src="img/stories/photo-8.jpg" alt="Just a flowerbed in the yard"></picture>
+							<picture><source srcset="img/stories/photo-8.webp" type="image/webp"><img src="img/stories/photo-8.jpg" alt="Moments that matter"></picture>
 						</div>
-						<div class="stories-slide__text">Just a flowerbed in the yard</div>
+						<div class="stories-slide__text">Moments that matter</div>
 					</div>
 				</div>
 			</div>
@@ -112,13 +241,13 @@
 				<div class="footer__wrapper">
 					<nav class="footer__menu menu-footer">
 						<ul class="menu-footer__items">
-							<li class="menu-footer__item"><a href="index.html">about us.</a></li>
+							<li class="menu-footer__item"><a href="index.html">about.</a></li>
 							<li class="menu-footer__item"><a href="projects.html">projects.</a></li>
-							<li class="menu-footer__item"><a href="contacts.html">contacts.</a></li>
-							<li class="menu-footer__item menu-footer__item_gradient"><a href="iprincestories.html">#TECHstories</a></li>
+							<li class="menu-footer__item"><a href="contacts.html">contact.</a></li>
+							<li class="menu-footer__item menu-footer__item_gradient"><a href="iprincestories.html">#research</a></li>
 						</ul>
 					</nav>
-					<div class="footer__copyright">© 2023 iPrince Technologies</div>
+					<div class="footer__copyright">&copy; 2025 Prince Oppong Boakye. All rights reserved.</div>
 				</div>
 			</div>
 		</footer>
@@ -127,8 +256,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20230327195509"></script>
 	<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js?_v=20230327195509"></script>
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12?_v=20230327195509"></script>
-
 	<script src="js/app.min.js?_v=20230327195509"></script>
+	<script src="js/spa-router.js"></script>
 </body>
 
 </html>
