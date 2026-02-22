@@ -22,9 +22,9 @@
 
   // ─── Initial page load: fade out the black overlay ───
   if (overlay) {
-    // Small delay lets globe video start behind the overlay
-    setTimeout(function () { overlay.style.opacity = '0'; }, 120);
-    setTimeout(function () { overlay.style.display = 'none'; }, 620);
+    // Fade overlay as soon as possible (globe has autoplay, images are preloaded)
+    setTimeout(function () { overlay.style.opacity = '0'; }, 50);
+    setTimeout(function () { overlay.style.display = 'none'; }, 450);
   }
 
   // ─── Prefetch pages on hover for instant navigation ───
