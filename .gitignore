@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+._*
+
+# IDE
+.vscode/
+.idea/
+
+# Thumbnails
+Thumbs.db
+
+# Node (in case of future tooling)
+node_modules/
