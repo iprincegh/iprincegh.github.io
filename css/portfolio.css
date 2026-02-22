@@ -419,6 +419,11 @@ body {
   font-weight: 700;
 }
 
+/* ---- About Work section (slider) ---- */
+.about-work {
+  margin-bottom: clamp(5rem, 1.25rem + 16.6666666667vw, 11.25rem);
+}
+
 /* ---- Work Experience Timeline ---- */
 .experience-timeline {
   display: flex;
