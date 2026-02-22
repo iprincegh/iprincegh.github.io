@@ -142,11 +142,11 @@ body {
   font-weight: 700;
   line-height: 1;
   color: #fff;
-  font-size: clamp(5rem, 4rem + 6vw, 10rem);
+  font-size: clamp(6rem, 5rem + 7vw, 12rem);
 }
 
 .slide-comm__years .years-block__text {
-  font-size: clamp(1.2rem, 1rem + 1.5vw, 2rem);
+  font-size: clamp(1.4rem, 1.1rem + 1.8vw, 2.4rem);
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
