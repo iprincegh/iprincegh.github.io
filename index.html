@@ -31,12 +31,12 @@
 
 	<div class="preload-bg">
 		<div class="preload-globe">
-			<video src="/img/globe.mp4" autoplay muted loop playsinline></video>
+			<video src="/img/globe.mp4" autoplay muted loop playsinline preload="auto"></video>
 		</div>
 		<div class="preload-greeting"><span class="text_thin">hi, I am</span> <span class="text-accent_violet">Prince</span></div>
 	</div>
 	<div class="spinning-globe">
-		<video src="/img/globe.mp4" autoplay muted loop playsinline></video>
+		<video src="/img/globe.mp4" muted loop playsinline preload="auto"></video>
 	</div>
 
 	<div class="wrapper">
@@ -101,8 +101,8 @@
 								<div class="media-block__text text_grey _animate-appear media-block__animate-text media-block__animate-text_r-l">
 									Scientist</div>
 								<div class="media-block__media _animate-appear _img-anim-hidden">
-									<video src="/img/home/welcome/media-3.mp4" autoplay muted loop playsinline
-										alt="open science work"></video>
+										<video data-lazy-src="/img/home/welcome/media-3.mp4" muted loop playsinline
+											preload="none" alt="open science work"></video>
 								</div>
 							</div>
 						</div>
@@ -253,8 +253,8 @@
 									<div class="media-block__row">
 										<div class="media-block__text text_grey">love</div>
 										<div class="media-block__media media-block__media">
-											<video src="/img/home/how-we-work/new-year.mp4" autoplay muted loop
-												playsinline alt="collaboration"></video>
+											<video data-lazy-src="/img/home/how-we-work/new-year.mp4" muted loop
+												playsinline preload="none" alt="collaboration"></video>
 										</div>
 									</div>
 								</div>
@@ -493,8 +493,14 @@
 	<script>
 		// Only show preload animation on first load of session
 		if (sessionStorage.getItem('preloadPlayed')) {
-			// Skip animation: hide preload elements immediately
-			document.querySelector('.preload-bg').style.display = 'none';
+			// Skip animation: hide preload elements and stop preload video
+			var preloadEl = document.querySelector('.preload-bg');
+			preloadEl.style.display = 'none';
+			var preloadVid = preloadEl.querySelector('video');
+			if (preloadVid) { preloadVid.pause(); preloadVid.removeAttribute('src'); preloadVid.load(); }
+			// Start the persistent globe instead
+			var globeVid = document.querySelector('.spinning-globe video');
+			if (globeVid) globeVid.play();
 			var orig = document.querySelector('#preload-text-original');
 			if (orig) orig.style.display = 'none';
 			var holder = document.querySelector('#preload-text-position-holder');
@@ -512,9 +518,37 @@
 				preloadBg.style.opacity = '0';
 				setTimeout(function() {
 					preloadBg.style.display = 'none';
+					// Stop preload video, start persistent globe
+					var pv = preloadBg.querySelector('video');
+					if (pv) { pv.pause(); pv.removeAttribute('src'); pv.load(); }
+					var gv = document.querySelector('.spinning-globe video');
+					if (gv) gv.play();
 				}, 800);
 			}, 4000);
 		}
+
+		// Lazy-load videos when they scroll into view
+		(function() {
+			var lazyVideos = document.querySelectorAll('video[data-lazy-src]');
+			if (!lazyVideos.length) return;
+			if ('IntersectionObserver' in window) {
+				var observer = new IntersectionObserver(function(entries) {
+					entries.forEach(function(entry) {
+						if (entry.isIntersecting) {
+							var video = entry.target;
+							video.src = video.dataset.lazySrc;
+							video.removeAttribute('data-lazy-src');
+							video.play();
+							observer.unobserve(video);
+						}
+					});
+				}, { rootMargin: '200px' });
+				lazyVideos.forEach(function(v) { observer.observe(v); });
+			} else {
+				// Fallback: load all immediately
+				lazyVideos.forEach(function(v) { v.src = v.dataset.lazySrc; v.play(); });
+			}
+		})();
 	</script>
 	<script src="/js/app.min.js?_v=20230327195509"></script>
 	<script src="/js/spa-router.js"></script>
