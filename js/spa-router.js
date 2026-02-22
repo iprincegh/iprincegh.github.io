@@ -8,28 +8,36 @@
   // Only run if the spinning globe exists
   if (!document.querySelector('.spinning-globe')) return;
 
-  // Internal pages we handle
-  var PAGES = ['index.html', 'projects.html', 'contacts.html', 'iprincestories.html'];
+  // Internal pages we handle — clean URL paths
+  var PAGES = ['/', '/projects/', '/contact/', '/research/'];
 
   function isInternalLink(href) {
     if (!href) return false;
     try {
       var url = new URL(href, window.location.origin);
       if (url.origin !== window.location.origin) return false;
-      var path = url.pathname.split('/').pop() || 'index.html';
+      var path = normalizePath(url.pathname);
       return PAGES.indexOf(path) !== -1;
     } catch (e) {
       return false;
     }
   }
 
-  function getPageName(href) {
+  function normalizePath(pathname) {
+    // Ensure trailing slash, treat root and /index.html as /
+    var p = pathname.replace(/\/index\.html$/, '/');
+    if (p === '' || p === '/index.html') p = '/';
+    if (p !== '/' && !p.endsWith('/')) p += '/';
+    return p;
+  }
+
+  function getPagePath(href) {
     var url = new URL(href, window.location.origin);
-    return url.pathname.split('/').pop() || 'index.html';
+    return normalizePath(url.pathname);
   }
 
   function swapPage(href, pushState) {
-    var pageName = getPageName(href);
+    var pageName = getPagePath(href);
 
     fetch(href, { cache: 'no-cache' })
       .then(function (res) { return res.text(); })
@@ -57,7 +65,7 @@
         var menuItems = document.querySelectorAll('.menu__item a');
         menuItems.forEach(function (a) {
           a.parentElement.classList.remove('active');
-          var linkPage = getPageName(a.href);
+          var linkPage = getPagePath(a.href);
           if (linkPage === pageName) {
             a.parentElement.classList.add('active');
           }
@@ -220,7 +228,7 @@
           e.preventDefault();
           var href = this.href;
           // Don't navigate if already on this page
-          if (getPageName(href) === getPageName(window.location.href)) {
+          if (getPagePath(href) === getPagePath(window.location.href)) {
             window.scrollTo(0, 0);
             return;
           }
@@ -239,5 +247,5 @@
   attachLinkHandlers();
 
   // Store initial state
-  history.replaceState({ page: getPageName(window.location.href) }, document.title, window.location.href);
+  history.replaceState({ page: getPagePath(window.location.href) }, document.title, window.location.href);
 })();
