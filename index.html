@@ -41,7 +41,7 @@
 		<div class="preload-greeting"><span class="text_thin">hi, I am</span> <span class="text-accent_violet">Prince</span></div>
 	</div>
 	<div class="spinning-globe">
-		<video muted loop playsinline preload="auto">
+		<video autoplay muted loop playsinline preload="auto">
 			<source src="/img/globe.webm" type="video/webm">
 			<source src="/img/globe.mp4" type="video/mp4">
 		</video>
@@ -506,7 +506,7 @@
 			preloadEl.style.display = 'none';
 			var preloadVid = preloadEl.querySelector('video');
 			if (preloadVid) { preloadVid.pause(); preloadVid.removeAttribute('src'); preloadVid.load(); }
-			// Persistent globe is started by spa-router.js (globe continuity script)
+			// Globe has autoplay — no manual play() needed
 			var orig = document.querySelector('#preload-text-original');
 			if (orig) orig.style.display = 'none';
 			var holder = document.querySelector('#preload-text-position-holder');
@@ -530,7 +530,7 @@
 					// Stop preload video, start persistent globe
 					var pv = preloadBg.querySelector('video');
 					if (pv) { pv.pause(); pv.removeAttribute('src'); pv.load(); }
-					// Persistent globe is started by spa-router.js (globe continuity script)
+					// Globe has autoplay — no manual play() needed
 				}, 800);
 			}, 4000);
 		}
