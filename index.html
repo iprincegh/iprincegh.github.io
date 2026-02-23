@@ -511,14 +511,19 @@
 			var preloadVid = preloadEl.querySelector('video');
 			if (preloadVid) { preloadVid.pause(); preloadVid.removeAttribute('src'); preloadVid.load(); }
 			// Globe has autoplay — no manual play() needed
+			// Remove #preload-text-original from DOM entirely so app.min.js
+			// doesn't trigger the lock + animation chain on reload
 			var orig = document.querySelector('#preload-text-original');
-			if (orig) orig.style.display = 'none';
+			if (orig) orig.remove();
 			var holder = document.querySelector('#preload-text-position-holder');
 			if (holder) holder.style.opacity = '100%';
 			// Show all animated elements immediately
 			document.querySelectorAll('._text-anim-origin').forEach(function(el) { el.style.opacity = '100%'; });
 			document.querySelectorAll('.media-block__animate-text').forEach(function(el) { el.style.display = 'none'; });
 			document.querySelectorAll('._img-anim-hidden').forEach(function(el) { el.style.opacity = '100%'; });
+			// Fade out page-transition overlay immediately (don't wait for spa-router.js)
+			var pt = document.querySelector('.page-transition');
+			if (pt) { pt.style.opacity = '0'; setTimeout(function() { pt.style.display = 'none'; }, 400); }
 		} else {
 			sessionStorage.setItem('preloadPlayed', '1');
 			// First visit: hide page-transition overlay (preload-bg handles entrance)
