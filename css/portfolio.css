@@ -628,3 +628,12 @@ body {
 .animated-link:hover {
   border-bottom-color: #f17e14;
 }
+
+/* ---- Gallery: show posters, flyers and wide shots uncropped ---- */
+.stories-slide__img_contain {
+  background: rgba(24, 28, 31, 0.8);
+}
+
+.stories-slide__img_contain img {
+  object-fit: contain;
+}

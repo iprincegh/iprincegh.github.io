@@ -5,7 +5,7 @@
 	<title>Research & Publications | Prince Oppong Boakye</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<meta name="description" content="Research publications by Prince Oppong Boakye — geoinformatics, spatial epidemiology, open science, CODECHECK, and machine learning.">
+	<meta name="description" content="Research publications by Prince Oppong Boakye — Bayesian spatio-temporal disease mapping, human mobility, spatial epidemiology, open science, and CODECHECK.">
 	<meta name="author" content="Prince Oppong Boakye">
 	<meta property="og:title" content="Research & Publications | Prince Oppong Boakye">
 	<meta property="og:description" content="Research publications in geoinformatics, spatial epidemiology, and open science.">
@@ -15,7 +15,9 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230327195509" />
 	<link rel="stylesheet" href="/css/style.min.css?_v=20230327195509">
 	<link rel="stylesheet" href="/css/portfolio.css">
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="icon" href="/favicon.ico" sizes="any">
+	<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>.page-transition{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:9999;pointer-events:none;opacity:1;transition:opacity .4s ease}</style>
 </head>
@@ -59,7 +61,7 @@
 						</div>
 
 						<div class="research-intro" style="max-width: 900px; margin: 2rem 0 3rem; line-height: 1.7;">
-							<p>My research sits at the intersection of <strong>geoinformatics</strong>, <strong>machine learning</strong>, and <strong>open science</strong>. I'm passionate about making research transparent, reproducible, and accessible. As a Reproducibility Manager at the University of Münster, I verify the computational reproducibility of scientific papers. Below are highlights from my research journey.</p>
+							<p>My research sits at the intersection of <strong>geoinformatics</strong>, <strong>spatial epidemiology</strong>, and <strong>open science</strong>. As a Student Assistant in the Spatio-Temporal Modelling Lab of Prof. Edzer Pebesma at the Institute for Geoinformatics, University of Münster, I build Bayesian spatio-temporal models that link human mobility to infectious disease risk. As Reproducibility Manager for Replication Research and a CODECHECK reviewer, I verified the computational reproducibility of scientific papers. Below are highlights from my research journey.</p>
 						</div>
 
 					</section>
@@ -77,20 +79,20 @@
 
 						<div class="choose__cards" style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
 							<div class="choose-card" style="flex: 1; min-width: 250px;">
+								<div class="choose-card__title">Spatial Epidemiology &amp; Mobility</div>
+								<div class="choose-card__text">Bayesian disease mapping with R-INLA, fine-scale COVID-19 risk estimation, origin&ndash;destination mobility from mobile-phone data, and mobility-attributable risk.</div>
+							</div>
+							<div class="choose-card" style="flex: 1; min-width: 250px;">
 								<div class="choose-card__title">Geospatial Analysis</div>
-								<div class="choose-card__text">Geostatistics, spatial data analysis, raster/vector processing, remote sensing, and GIS applications for health and environmental research.</div>
+								<div class="choose-card__text">Spatial statistics, spatio-temporal data analysis, change of support, raster/vector processing, Earth observation, and GIS for health and environmental research.</div>
 							</div>
 							<div class="choose-card" style="flex: 1; min-width: 250px;">
 								<div class="choose-card__title">Machine Learning &amp; AI</div>
-								<div class="choose-card__text">NLP, sentiment analysis, LLM-based chatbots, predictive modeling for public health, and AI applications in geosciences.</div>
+								<div class="choose-card__text">NLP and sentiment analysis, LLM-based question answering for geospatial catalogues, computer vision, and explainable AI.</div>
 							</div>
 							<div class="choose-card" style="flex: 1; min-width: 250px;">
 								<div class="choose-card__title">Open Science</div>
-								<div class="choose-card__text">Computational reproducibility checking, FAIR data principles, open-source research tools, and transparent scientific workflows.</div>
-							</div>
-							<div class="choose-card" style="flex: 1; min-width: 250px;">
-								<div class="choose-card__title">Health Informatics</div>
-								<div class="choose-card__text">Geospatial analysis of disease patterns, malaria prevalence modeling, and haptic/assistive technologies for visually impaired navigation.</div>
+								<div class="choose-card__text">Computational reproducibility checking (CODECHECK), replication research, FAIR data principles, and open-source research tools.</div>
 							</div>
 						</div>
 					</section>
@@ -102,59 +104,72 @@
 						</div>
 
 						<div class="publications-list">
-							<!-- ResearchGate publications -->
 							<div class="publication-item">
-								<div class="publication-item__title">Wearable Haptic Wayfinding Systems for the Visually Impaired: A Critical Review of Sensor Technologies, Interface Design, and Usability Challenges</div>
-								<div class="publication-item__meta">Prince Oppong Boakye (2025) &bull; Preprint</div>
-								<div class="publication-item__desc">A critical synthesis of 31 academic studies on wearable haptic navigation systems designed for visually impaired pedestrians, analyzing unresolved trade-offs between sensor modalities and haptic encoding strategies.</div>
-								<a class="publication-item__link" href="https://www.researchgate.net/publication/398422684" target="_blank">View on ResearchGate &rarr;</a>
+								<div class="publication-item__title">Bayesian Spatiotemporal Attribution of COVID-19 Risk to Human Mobility Across Spatial Resolutions</div>
+								<div class="publication-item__meta">Prince Oppong Boakye, Poshan Niraula &amp; Edzer Pebesma &bull; Manuscript under revision, International Journal of Health Geographics</div>
+								<div class="publication-item__desc">Bayesian spatio-temporal models link COVID-19 cases at 100 m grid cells in New York City and Utah counties to visit activity and origin&ndash;destination infection pressure, estimating the Proportion of Cases Attributable to Mobility (PCAtM) in-sample and in held-out areas.</div>
+								<a class="publication-item__link" href="https://github.com/iprincegh/COVID-19-NYC-Utah" target="_blank">Code on GitHub &rarr;</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">Simulating Fine-Scale Population Flow for Infectious Disease Transmission Modelling</div>
+								<div class="publication-item__meta">Prince Oppong Boakye (2026) &bull; MSc Thesis, University of M&uuml;nster (supervised by Prof. Edzer Pebesma and Poshan Niraula)</div>
+								<div class="publication-item__desc">Fine-scale Bayesian spatio-temporal model of COVID-19 transmission risk fitted with INLA, with an origin&ndash;destination infection-pressure covariate from anonymised mobile-phone data, six model variants across three pandemic waves, and counterfactual decomposition of mobility-attributable cases.</div>
+								<a class="publication-item__link" href="https://github.com/iprincegh/fine-scale-popflow-disease-modelling" target="_blank">Reproducible pipeline on GitHub &rarr;</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">Where Visitors Come From Matters: Computing Fine-Scale Epidemic Risk via Origin&ndash;Destination Case Coupling</div>
+								<div class="publication-item__meta">Prince Oppong Boakye, Poshan Niraula &amp; Edzer Pebesma (2026) &bull; Poster, GeoMed 2026, Pamplona, Spain</div>
+								<div class="publication-item__desc">Conference poster presenting fine-scale epidemic risk estimation that couples cases with visitors&rsquo; home areas through origin&ndash;destination mobility.</div>
+								<a class="publication-item__link" href="https://doi.org/10.5281/zenodo.21281763" target="_blank">DOI: 10.5281/zenodo.21281763</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">An Approach for Verifying Terrestrial Photographs via Geosignatures</div>
+								<div class="publication-item__meta">Abubakar, A., Ajay, A., Brand, T., Denk, M., Kray, C., Lehmann, T., Prince Oppong Boakye, Venier, L. &amp; Yohanna, S. (2026) &bull; COSIT 2026, York, UK</div>
+								<div class="publication-item__desc">Presented at the 17th International Conference on Spatial Information Theory: cryptographic geosignatures that make the capture location and time of terrestrial photographs verifiable.</div>
+								<a class="publication-item__link" href="https://doi.org/10.5281/zenodo.21725226" target="_blank">DOI: 10.5281/zenodo.21725226</a>
 							</div>
 
 							<div class="publication-item">
 								<div class="publication-item__title">A Community Model for Rigorous and Inclusive Scholarship: Inaugural Editorial of Replication Research (R2)</div>
-								<div class="publication-item__meta">Lukas R&ouml;seler, Lukas Wallrich, ... Prince Oppong Boakye et al. (2025) &bull; Article, Replication Research</div>
+								<div class="publication-item__meta">Lukas R&ouml;seler, Lukas Wallrich, S. Adler, Prince Oppong Boakye et al. (2025) &bull; Article, Replication Research</div>
 								<div class="publication-item__desc">Replication Research (R2) is a Diamond Open Access journal publishing high-quality reproductions, replications, and related methodological work across disciplines with robust standards for transparency.</div>
-								<a class="publication-item__link" href="https://www.researchgate.net/publication/397331903" target="_blank">View on ResearchGate &rarr;</a>
+								<a class="publication-item__link" href="https://doi.org/10.17879/replicationresearch-2025-9022" target="_blank">DOI: 10.17879/replicationresearch-2025-9022</a>
 							</div>
 
 							<div class="publication-item">
-								<div class="publication-item__title">Replication Research Constitution</div>
-								<div class="publication-item__meta">Lukas R&ouml;seler, Lukas Wallrich, ... Prince Oppong Boakye et al. (2025) &bull; Preprint</div>
+								<div class="publication-item__title">Wearable Haptic Wayfinding Systems for the Visually Impaired: A Critical Review of Sensor Technologies, Interface Design, and Usability Challenges</div>
+								<div class="publication-item__meta">Prince Oppong Boakye (2025) &bull; Zenodo</div>
+								<div class="publication-item__desc">A critical synthesis of 31 academic studies on wearable haptic navigation systems designed for visually impaired pedestrians, analyzing unresolved trade-offs between sensor modalities and haptic encoding strategies.</div>
+								<a class="publication-item__link" href="https://doi.org/10.5281/zenodo.17847163" target="_blank">DOI: 10.5281/zenodo.17847163</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">Replication Research Constitution (R2 Launch)</div>
+								<div class="publication-item__meta">Lukas R&ouml;seler, Lukas Wallrich, ... Prince Oppong Boakye et al. (2025) &bull; Zenodo</div>
 								<div class="publication-item__desc">Constitution for the newly established diamond open-access journal Replication Research, developed in collaboration with FORRT and a large community of researchers.</div>
-								<a class="publication-item__link" href="https://www.researchgate.net/publication/396447360" target="_blank">View on ResearchGate &rarr;</a>
+								<a class="publication-item__link" href="https://doi.org/10.5281/zenodo.17279413" target="_blank">DOI: 10.5281/zenodo.17279413</a>
 							</div>
 
 							<div class="publication-item">
-								<div class="publication-item__title">Replication Research: Journal Description</div>
-								<div class="publication-item__meta">Lukas R&ouml;seler, Lukas Wallrich, ... Prince Oppong Boakye et al. (2025) &bull; Preprint</div>
+								<div class="publication-item__title">Replication Research: Journal Description (R2 Launch)</div>
+								<div class="publication-item__meta">Lukas R&ouml;seler, Lukas Wallrich, ... Prince Oppong Boakye et al. (2025) &bull; Zenodo</div>
 								<div class="publication-item__desc">Materials for the diamond open-access journal Replication Research (replicationresearch.org), created to enable researchers and journals to cite, view, and reuse its contents.</div>
-								<a class="publication-item__link" href="https://www.researchgate.net/publication/396447199" target="_blank">View on ResearchGate &rarr;</a>
-							</div>
-
-							<div class="publication-item">
-								<div class="publication-item__title">Spatio-Temporal Analysis of Ghana Malaria Cases: Development of an Interactive Dashboard for Public Health Decision-Making</div>
-								<div class="publication-item__meta">Prince Oppong Boakye (2024) &bull; Research, University of M&uuml;nster</div>
-								<div class="publication-item__desc">A method for malaria surveillance in Ghana relying on 10 years of data (2010&ndash;2020), featuring an interactive geospatial dashboard combining malaria incidence rates by region.</div>
-								<a class="publication-item__link" href="https://www.researchgate.net/publication/398711570" target="_blank">View on ResearchGate &rarr;</a>
-							</div>
-
-							<div class="publication-item">
-								<div class="publication-item__title">Sentiment Analysis in Python Using Machine Learning</div>
-								<div class="publication-item__meta">Prince Oppong Boakye (2023) &bull; BSc Thesis, Bharathiar University</div>
-								<div class="publication-item__desc">Comprehensive sentiment analysis of customer reviews using machine learning models including VADER, TextBlob, and transformer architectures for large-scale e-commerce text data.</div>
-								<a class="publication-item__link" href="https://www.researchgate.net/publication/398701615" target="_blank">View on ResearchGate &rarr;</a>
+								<a class="publication-item__link" href="https://doi.org/10.5281/zenodo.17241396" target="_blank">DOI: 10.5281/zenodo.17241396</a>
 							</div>
 
 							<div class="publication-item">
 								<div class="publication-item__title">Replication of Geers and Lassiter (2003, Study 1): Affective Expectations and Need for Cognition</div>
-								<div class="publication-item__meta">Lukas R&ouml;seler, Doetsch, C. A., F&ouml;rster, N., ... Prince Oppong Boakye (2025) &bull; Preprint</div>
+								<div class="publication-item__meta">Lukas R&ouml;seler, Doetsch, C. A., F&ouml;rster, N., ... Prince Oppong Boakye (2025) &bull; OSF</div>
 								<div class="publication-item__desc">Replication study examining the relationship between affective expectations and need for cognition, based on the original Geers and Lassiter (2003) findings.</div>
 								<a class="publication-item__link" href="https://doi.org/10.17605/OSF.IO/RGE23" target="_blank">DOI: 10.17605/OSF.IO/RGE23</a>
 							</div>
 
 							<div class="publication-item">
 								<div class="publication-item__title">StaRT Reports</div>
-								<div class="publication-item__meta">Lukas R&ouml;seler, Hein, M., &amp; Prince Oppong Boakye (2025) &bull; Preprint</div>
+								<div class="publication-item__meta">Lukas R&ouml;seler, Hein, M., &amp; Prince Oppong Boakye (2025) &bull; OSF</div>
 								<div class="publication-item__desc">Standardized Replication and Testing (StaRT) reports framework for transparent and structured documentation of replication studies.</div>
 								<a class="publication-item__link" href="https://doi.org/10.17605/OSF.IO/BRXTD" target="_blank">DOI: 10.17605/OSF.IO/BRXTD</a>
 							</div>
@@ -164,6 +179,20 @@
 								<div class="publication-item__meta">Prince Oppong Boakye (2025) &bull; Zenodo</div>
 								<div class="publication-item__desc">Certificate documenting the computational reproducibility verification of a scientific paper as part of the CODECHECK initiative.</div>
 								<a class="publication-item__link" href="https://doi.org/10.5281/zenodo.15762107" target="_blank">DOI: 10.5281/zenodo.15762107</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">Spatio-Temporal Analysis of Malaria Cases in Ghana: Development of an Interactive Dashboard for Public Health Decision-Making</div>
+								<div class="publication-item__meta">Prince Oppong Boakye (2024) &bull; Health Research for Africa, Zenodo</div>
+								<div class="publication-item__desc">A method for malaria surveillance in Ghana relying on 10 years of data (2010&ndash;2020), featuring an interactive geospatial dashboard combining malaria incidence rates by region.</div>
+								<a class="publication-item__link" href="https://doi.org/10.5281/zenodo.18162303" target="_blank">DOI: 10.5281/zenodo.18162303</a>
+							</div>
+
+							<div class="publication-item">
+								<div class="publication-item__title">Sentiment Analysis in Python Using Machine Learning</div>
+								<div class="publication-item__meta">Prince Oppong Boakye (2023) &bull; BSc Thesis, Bharathiar University; conference paper, International Conference on Current Developments in Computer Science, Engineering, and Information Technology</div>
+								<div class="publication-item__desc">Supervised machine learning models for sentiment classification of text data, later extended with RoBERTa, VADER, and transformer pipelines on Amazon product reviews.</div>
+								<a class="publication-item__link" href="https://www.researchgate.net/publication/398701615" target="_blank">View on ResearchGate &rarr;</a>
 							</div>
 						</div>
 					</section>
@@ -175,6 +204,10 @@
 						</div>
 
 						<div class="portfolio-socials__links" style="margin-top: 1rem;">
+							<a href="https://www.uni-muenster.de/Geoinformatics/en/institute/staff/index.php/508/Prince_Oppong_Boakye" target="_blank" class="portfolio-socials__link">
+								<span class="portfolio-socials__icon">ifgi</span>
+								<span>ifgi Staff Profile</span>
+							</a>
 							<a href="https://www.researchgate.net/profile/Prince-Oppong-Boakye" target="_blank" class="portfolio-socials__link">
 								<span class="portfolio-socials__icon">RG</span>
 								<span>ResearchGate</span>
@@ -198,51 +231,45 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide stories-slide">
 						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-1.webp" type="image/webp"><img src="/img/stories/photo-1.jpg" alt="Research journey"></picture>
+							<picture><source srcset="/img/gallery/spatio-temporal-modeling-lab-ifgi.webp" type="image/webp"><img src="/img/gallery/spatio-temporal-modeling-lab-ifgi.jpg" alt="Spatio-Temporal Modeling Lab, ifgi" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Research journey</div>
+						<div class="stories-slide__text">Spatio-Temporal Modeling Lab, ifgi</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-2.webp" type="image/webp"><img src="/img/stories/photo-2.jpg" alt="Geoinformatics at ifgi"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/geomed-2026-poster.webp" type="image/webp"><img src="/img/gallery/geomed-2026-poster.jpg" alt="GeoMed 2026 Poster, Pamplona" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Geoinformatics at ifgi</div>
+						<div class="stories-slide__text">GeoMed 2026 Poster, Pamplona</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-3.webp" type="image/webp"><img src="/img/stories/photo-3.jpg" alt="Open Science"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/geoai4ei.webp" type="image/webp"><img src="/img/gallery/geoai4ei.jpg" alt="GeoAI4EI" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Open Science</div>
+						<div class="stories-slide__text">GeoAI4EI</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-4.webp" type="image/webp"><img src="/img/stories/photo-4.jpg" alt="From Ghana to Germany"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/msc-thesis.webp" type="image/webp"><img src="/img/gallery/msc-thesis.jpg" alt="MSc Thesis" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">From Ghana to Germany</div>
+						<div class="stories-slide__text">MSc Thesis</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-5.webp" type="image/webp"><img src="/img/stories/photo-5.jpg" alt="Exploring the world"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/african-students-representative.webp" type="image/webp"><img src="/img/gallery/african-students-representative.jpg" alt="African Students&#39; Representative" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Exploring the world</div>
+						<div class="stories-slide__text">African Students' Representative</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-6.webp" type="image/webp"><img src="/img/stories/photo-6.jpg" alt="Collaboration"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/guest-speaker-rcas-india.webp" type="image/webp"><img src="/img/gallery/guest-speaker-rcas-india.jpg" alt="Guest Speaker, RCAS India" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Collaboration</div>
+						<div class="stories-slide__text">Guest Speaker, RCAS India</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-7.webp" type="image/webp"><img src="/img/stories/photo-7.jpg" alt="Building solutions"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/mucos-data-science-poster.webp" type="image/webp"><img src="/img/gallery/mucos-data-science-poster.jpg" alt="M&uuml;COS Data Science Poster" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Building solutions</div>
-					</div>
-					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-8.webp" type="image/webp"><img src="/img/stories/photo-8.jpg" alt="Moments that matter"></picture>
-						</div>
-						<div class="stories-slide__text">Moments that matter</div>
+						<div class="stories-slide__text">M&uuml;COS Data Science Poster</div>
 					</div>
 				</div>
 			</div>

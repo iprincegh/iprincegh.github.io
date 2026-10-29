@@ -5,18 +5,20 @@
 	<title>Projects | Prince Oppong Boakye</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<meta name="description" content="Research projects and GitHub repositories by Prince Oppong Boakye — geospatial analysis, machine learning, open science, and spatial epidemiology.">
+	<meta name="description" content="Research projects and GitHub repositories by Prince Oppong Boakye — Bayesian disease mapping, human mobility, geospatial analysis, machine learning, and open science.">
 	<meta name="author" content="Prince Oppong Boakye">
 	<meta property="og:title" content="Projects | Prince Oppong Boakye">
 	<meta property="og:description" content="Explore research projects in geospatial analysis, machine learning, and open science.">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://iprincegh.github.io/projects/">
-	<meta property="og:image" content="https://iprincegh.github.io/img/home/what-we-say/Prince.webp">
+	<meta property="og:image" content="https://iprincegh.github.io/img/home/what-we-say/Prince.jpg">
 	<link rel="canonical" href="https://iprincegh.github.io/projects/">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230327195509" />
 	<link rel="stylesheet" href="/css/style.min.css?_v=20230327195509">
 	<link rel="stylesheet" href="/css/portfolio.css">
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="icon" href="/favicon.ico" sizes="any">
+	<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>.page-transition{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:9999;pointer-events:none;opacity:1;transition:opacity .4s ease}</style>
 </head>
@@ -59,6 +61,7 @@
 					<section class="vacancy-hero">
 						<div class="vacancy-hero__wrapper block-cross-out">
 							<div id="typed-strings">
+								<p>bayesian disease mapping &amp; R-INLA</p>
 								<p>geospatial analysis &amp; geostatistics</p>
 								<p>machine learning &amp; NLP</p>
 								<p>open science &amp; reproducibility</p>
@@ -81,15 +84,57 @@
 						</div>
 						<div class="projects-grid">
 							<div class="project-card">
+								<div class="project-card__title">COVID-19 Risk &amp; Mobility in NYC and Utah</div>
+								<div class="project-card__meta">R &bull; &#9733; 2 &bull; Bayesian Disease Mapping</div>
+								<div class="project-card__desc">Code and results for the paper &ldquo;Bayesian Spatiotemporal Attribution of COVID-19 Risk to Human Mobility Across Spatial Resolutions&rdquo; (with Poshan Niraula and Edzer Pebesma): 100 m grid cells in New York City and Utah counties across three pandemic waves, runnable on Binder.</div>
+								<a class="project-card__link" href="https://github.com/iprincegh/COVID-19-NYC-Utah" target="_blank">View on GitHub &rarr;</a>
+							</div>
+							<div class="project-card">
+								<div class="project-card__title">Fine-Scale Population Flow for Disease Modelling</div>
+								<div class="project-card__meta">R &bull; MSc Thesis &bull; R-INLA</div>
+								<div class="project-card__desc">Reproducible pipeline for the MSc thesis &ldquo;Simulating Fine-Scale Population Flow for Infectious Disease Transmission Modelling&rdquo;: an origin&ndash;destination infection-pressure covariate from mobile-phone data in Bayesian spatio-temporal models.</div>
+								<a class="project-card__link" href="https://github.com/iprincegh/fine-scale-popflow-disease-modelling" target="_blank">View on GitHub &rarr;</a>
+							</div>
+							<div class="project-card">
+								<div class="project-card__title">High-Resolution Infectious Disease Modelling</div>
+								<div class="project-card__meta">R &bull; R-INLA &bull; 100 m Grids</div>
+								<div class="project-card__desc">Fine-scale COVID-19 risk estimation on 100 m &times; 100 m grids using R-INLA, mobility-derived origin&ndash;destination kernels, and augmented neighbourhood graphs for New York City and Utah.</div>
+								<a class="project-card__link" href="https://github.com/iprincegh/HighRes-InfectiousDisease-Modelling" target="_blank">View on GitHub &rarr;</a>
+							</div>
+							<div class="project-card">
+								<div class="project-card__title">COVID-19 Mobility by Health Zones</div>
+								<div class="project-card__meta">R &bull; &#9733; 1 &bull; Open Data</div>
+								<div class="project-card__desc">Daily COVID-19 cases, MITMA mobility, and covariates for the 374 basic health areas of Catalunya and the 286 of Madrid (March 2020&ndash;May 2021), released as panel tables with mobility flows archived on Zenodo.</div>
+								<a class="project-card__link" href="https://github.com/iprincegh/covid19-mobility-healthzones" target="_blank">View on GitHub &rarr;</a>
+							</div>
+							<div class="project-card">
+								<div class="project-card__title">NYC 100 m COVID-19 Risk in 3D</div>
+								<div class="project-card__meta">JavaScript &bull; deck.gl &bull; Visualization</div>
+								<div class="project-card__desc">Interactive visualization of 100 m grid relative risk of COVID-19 in New York City on Google Photorealistic 3D Tiles.</div>
+								<a class="project-card__link" href="https://github.com/iprincegh/nyc-100m-covid-risk-3d" target="_blank">View on GitHub &rarr;</a>
+							</div>
+							<div class="project-card">
+								<div class="project-card__title">nbstitch &mdash; Spatial Topology Repair</div>
+								<div class="project-card__meta">R &bull; Areal Models</div>
+								<div class="project-card__desc">An R package that repairs and augments fragmented spdep neighbourhood graphs into a single connected component, as required by intrinsic CAR and BYM2 priors in R-INLA, using infrastructure edges and iterative nearest-neighbour component merging.</div>
+								<a class="project-card__link" href="https://github.com/iprincegh/r-nbstitch" target="_blank">View on GitHub &rarr;</a>
+							</div>
+							<div class="project-card">
+								<div class="project-card__title">Emergency Response Mapping Dashboard</div>
+								<div class="project-card__meta">Team project &bull; PostGIS &amp; Flask</div>
+								<div class="project-card__desc">Real-time emergency-response mapping dashboard with heatmap visualisation, incident analysis, optimal facility placement, and route optimisation, built on Leaflet.js, Chart.js, PostgreSQL/PostGIS with pgRouting, and a Python Flask API.</div>
+								<a class="project-card__link" href="https://github.com/iprincegh/emergency-mapping-dashboard" target="_blank">View on GitHub &rarr;</a>
+							</div>
+							<div class="project-card">
 								<div class="project-card__title">Spatio-Temporal Analysis of Ghana Malaria Cases</div>
 								<div class="project-card__meta">R &bull; &#9733; 1 &bull; Geospatial &amp; Health</div>
 								<div class="project-card__desc">Spatio-temporal analysis of malaria cases in Ghana with an interactive dashboard for public health decision-making, covering data from 2010&ndash;2020.</div>
 								<a class="project-card__link" href="https://github.com/iprincegh/SpatioTemp-Analysis-Ghana-Malaria-Cases" target="_blank">View on GitHub &rarr;</a>
 							</div>
 							<div class="project-card">
-								<div class="project-card__title">Question Answering System for Raster Data</div>
+								<div class="project-card__title">StaChat &mdash; Question Answering for STAC Catalogs</div>
 								<div class="project-card__meta">Cypher &bull; LLM &amp; Neo4j</div>
-								<div class="project-card__desc">An LLM-based question answering system for raster data quality assurance, combining geospatial expertise with a Neo4j graph database and conversational AI.</div>
+								<div class="project-card__desc">A conversational AI system that answers natural-language questions about STAC satellite-data collections (Sentinel-2, Sentinel-3, MODIS), combining a Neo4j graph database, hybrid vector and BM25 retrieval, and OpenAI GPT models.</div>
 								<a class="project-card__link" href="https://github.com/iprincegh/Question-Answering-System-for-Raster-Data" target="_blank">View on GitHub &rarr;</a>
 							</div>
 							<div class="project-card">
@@ -119,7 +164,7 @@
 							<div class="project-card">
 								<div class="project-card__title">GeoCam &mdash; Geo-Signed Camera</div>
 								<div class="project-card__meta">Disinformation &amp; Geomedia</div>
-								<div class="project-card__desc">A camera application that signs pictures with verified location and time data. Any modification breaks the signature, enabling verification of photo provenance.</div>
+								<div class="project-card__desc">A location-verified photography platform against visual disinformation: a React Native app signs photos with secp256k1 and embeds tamper-evident GPS and device metadata, with a public portal to verify where and when a picture was taken. Presented at COSIT 2026.</div>
 								<a class="project-card__link" href="https://github.com/iprincegh/geocam" target="_blank">View on GitHub &rarr;</a>
 							</div>
 							<div class="project-card">
@@ -152,6 +197,12 @@
 								<div class="project-card__desc">SensorWeb and SensorThings API data loading via MQTT protocol for real-time sensor data integration and IoT applications.</div>
 								<a class="project-card__link" href="https://github.com/iprincegh/Data-Loading-via-MQTT" target="_blank">View on GitHub &rarr;</a>
 							</div>
+							<div class="project-card">
+								<div class="project-card__title">Sentiment Analysis with Machine Learning</div>
+								<div class="project-card__meta">Jupyter Notebook &bull; &#9733; 1 &bull; NLP</div>
+								<div class="project-card__desc">Extension of the BSc thesis comparing pretrained sentiment-classification models (RoBERTa, VADER, transformer pipelines) on Amazon product reviews to extract insights for business decisions.</div>
+								<a class="project-card__link" href="https://github.com/iprincegh/sentiment-analysis-machine-learning" target="_blank">View on GitHub &rarr;</a>
+							</div>
 						</div>
 						<div style="margin-top: 2rem; text-align: center;">
 							<a class="animated-link" href="https://github.com/iprincegh?tab=repositories" target="_blank" style="font-size: 1.1rem;">View all repositories on GitHub &rarr;</a>
@@ -171,39 +222,45 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide stories-slide">
 						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-1.webp" type="image/webp"><img src="/img/stories/photo-1.jpg" alt="Research"></picture>
+							<picture><source srcset="/img/gallery/spatio-temporal-modeling-lab-ifgi.webp" type="image/webp"><img src="/img/gallery/spatio-temporal-modeling-lab-ifgi.jpg" alt="Spatio-Temporal Modeling Lab, ifgi" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Research</div>
+						<div class="stories-slide__text">Spatio-Temporal Modeling Lab, ifgi</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-2.webp" type="image/webp"><img src="/img/stories/photo-2.jpg" alt="Geoinformatics"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/geomed-2026-poster.webp" type="image/webp"><img src="/img/gallery/geomed-2026-poster.jpg" alt="GeoMed 2026 Poster, Pamplona" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Geoinformatics</div>
+						<div class="stories-slide__text">GeoMed 2026 Poster, Pamplona</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-3.webp" type="image/webp"><img src="/img/stories/photo-3.jpg" alt="Open Science"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/geoai4ei.webp" type="image/webp"><img src="/img/gallery/geoai4ei.jpg" alt="GeoAI4EI" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Open Science</div>
+						<div class="stories-slide__text">GeoAI4EI</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-4.webp" type="image/webp"><img src="/img/stories/photo-4.jpg" alt="Coding"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/msc-thesis.webp" type="image/webp"><img src="/img/gallery/msc-thesis.jpg" alt="MSc Thesis" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Coding</div>
+						<div class="stories-slide__text">MSc Thesis</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-5.webp" type="image/webp"><img src="/img/stories/photo-5.jpg" alt="Data Science"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/african-students-representative.webp" type="image/webp"><img src="/img/gallery/african-students-representative.jpg" alt="African Students&#39; Representative" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Data Science</div>
+						<div class="stories-slide__text">African Students' Representative</div>
 					</div>
 					<div class="swiper-slide stories-slide">
-						<div class="stories-slide__img">
-							<picture><source srcset="/img/stories/photo-6.webp" type="image/webp"><img src="/img/stories/photo-6.jpg" alt="Collaboration"></picture>
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/guest-speaker-rcas-india.webp" type="image/webp"><img src="/img/gallery/guest-speaker-rcas-india.jpg" alt="Guest Speaker, RCAS India" loading="lazy"></picture>
 						</div>
-						<div class="stories-slide__text">Collaboration</div>
+						<div class="stories-slide__text">Guest Speaker, RCAS India</div>
+					</div>
+					<div class="swiper-slide stories-slide">
+						<div class="stories-slide__img stories-slide__img_contain">
+							<picture><source srcset="/img/gallery/mucos-data-science-poster.webp" type="image/webp"><img src="/img/gallery/mucos-data-science-poster.jpg" alt="M&uuml;COS Data Science Poster" loading="lazy"></picture>
+						</div>
+						<div class="stories-slide__text">M&uuml;COS Data Science Poster</div>
 					</div>
 				</div>
 			</div>
