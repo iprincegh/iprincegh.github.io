@@ -637,3 +637,15 @@ body {
 .stories-slide__img_contain img {
   object-fit: contain;
 }
+
+/* ---- Header logo: round cartoon avatar ---- */
+.header__logo {
+  flex: 0 0 auto;
+}
+
+.header__logo img {
+  display: block;
+  width: clamp(3rem, 2.5rem + 2vw, 4.5rem);
+  height: auto;
+  border-radius: 50%;
+}
